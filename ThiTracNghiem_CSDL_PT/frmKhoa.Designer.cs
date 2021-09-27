@@ -39,19 +39,19 @@ namespace ThiTracNghiem_CSDL_PT
             System.Windows.Forms.Label hOLabel;
             System.Windows.Forms.Label mAGVLabel;
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.bar1 = new DevExpress.XtraBars.Bar();
+            this.btnThem = new DevExpress.XtraBars.BarButtonItem();
+            this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSua = new DevExpress.XtraBars.BarButtonItem();
+            this.btnGhi = new DevExpress.XtraBars.BarButtonItem();
+            this.btnLamMoi = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPhucHoi = new DevExpress.XtraBars.BarButtonItem();
+            this.btnThoat = new DevExpress.XtraBars.BarButtonItem();
+            this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.bar1 = new DevExpress.XtraBars.Bar();
-            this.bar3 = new DevExpress.XtraBars.Bar();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.gIAOVIENGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMAGV = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -103,6 +103,86 @@ namespace ThiTracNghiem_CSDL_PT
             this.panelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // mACSLabel
+            // 
+            mACSLabel.AutoSize = true;
+            mACSLabel.Location = new System.Drawing.Point(485, 75);
+            mACSLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            mACSLabel.Name = "mACSLabel";
+            mACSLabel.Size = new System.Drawing.Size(50, 17);
+            mACSLabel.TabIndex = 4;
+            mACSLabel.Text = "MACS:";
+            // 
+            // tENKHLabel
+            // 
+            tENKHLabel.AutoSize = true;
+            tENKHLabel.Location = new System.Drawing.Point(252, 75);
+            tENKHLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            tENKHLabel.Name = "tENKHLabel";
+            tENKHLabel.Size = new System.Drawing.Size(59, 17);
+            tENKHLabel.TabIndex = 2;
+            tENKHLabel.Text = "TENKH:";
+            // 
+            // mAKHLabel
+            // 
+            mAKHLabel.AutoSize = true;
+            mAKHLabel.Location = new System.Drawing.Point(36, 75);
+            mAKHLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            mAKHLabel.Name = "mAKHLabel";
+            mAKHLabel.Size = new System.Drawing.Size(51, 17);
+            mAKHLabel.TabIndex = 0;
+            mAKHLabel.Text = "MAKH:";
+            // 
+            // mAKHLabel1
+            // 
+            mAKHLabel1.AutoSize = true;
+            mAKHLabel1.Location = new System.Drawing.Point(343, 95);
+            mAKHLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            mAKHLabel1.Name = "mAKHLabel1";
+            mAKHLabel1.Size = new System.Drawing.Size(51, 17);
+            mAKHLabel1.TabIndex = 8;
+            mAKHLabel1.Text = "MAKH:";
+            // 
+            // dIACHILabel
+            // 
+            dIACHILabel.AutoSize = true;
+            dIACHILabel.Location = new System.Drawing.Point(89, 95);
+            dIACHILabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            dIACHILabel.Name = "dIACHILabel";
+            dIACHILabel.Size = new System.Drawing.Size(56, 17);
+            dIACHILabel.TabIndex = 6;
+            dIACHILabel.Text = "DIACHI:";
+            // 
+            // tENLabel
+            // 
+            tENLabel.AutoSize = true;
+            tENLabel.Location = new System.Drawing.Point(496, 43);
+            tENLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            tENLabel.Name = "tENLabel";
+            tENLabel.Size = new System.Drawing.Size(40, 17);
+            tENLabel.TabIndex = 4;
+            tENLabel.Text = "TEN:";
+            // 
+            // hOLabel
+            // 
+            hOLabel.AutoSize = true;
+            hOLabel.Location = new System.Drawing.Point(267, 43);
+            hOLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            hOLabel.Name = "hOLabel";
+            hOLabel.Size = new System.Drawing.Size(33, 17);
+            hOLabel.TabIndex = 2;
+            hOLabel.Text = "HO:";
+            // 
+            // mAGVLabel
+            // 
+            mAGVLabel.AutoSize = true;
+            mAGVLabel.Location = new System.Drawing.Point(28, 43);
+            mAGVLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            mAGVLabel.Name = "mAGVLabel";
+            mAGVLabel.Size = new System.Drawing.Size(52, 17);
+            mAGVLabel.TabIndex = 0;
+            mAGVLabel.Text = "MAGV:";
+            // 
             // barManager1
             // 
             this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
@@ -114,15 +194,86 @@ namespace ThiTracNghiem_CSDL_PT
             this.barManager1.DockControls.Add(this.barDockControlRight);
             this.barManager1.Form = this;
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.barButtonItem1,
-            this.barButtonItem2,
-            this.barButtonItem3,
-            this.barButtonItem4,
-            this.barButtonItem5,
-            this.barButtonItem6,
-            this.barButtonItem7});
+            this.btnThem,
+            this.btnXoa,
+            this.btnSua,
+            this.btnGhi,
+            this.btnLamMoi,
+            this.btnPhucHoi,
+            this.btnThoat});
             this.barManager1.MaxItemId = 7;
             this.barManager1.StatusBar = this.bar3;
+            // 
+            // bar1
+            // 
+            this.bar1.BarName = "Tools";
+            this.bar1.DockCol = 0;
+            this.bar1.DockRow = 0;
+            this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar1.FloatLocation = new System.Drawing.Point(349, 171);
+            this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnThem, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnXoa, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnSua, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnGhi, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnLamMoi, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnPhucHoi, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnThoat, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            this.bar1.Text = "Tools";
+            // 
+            // btnThem
+            // 
+            this.btnThem.Caption = "Thêm";
+            this.btnThem.Id = 0;
+            this.btnThem.Name = "btnThem";
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Caption = "Xóa";
+            this.btnXoa.Id = 1;
+            this.btnXoa.Name = "btnXoa";
+            // 
+            // btnSua
+            // 
+            this.btnSua.Caption = "Sửa";
+            this.btnSua.Id = 2;
+            this.btnSua.Name = "btnSua";
+            // 
+            // btnGhi
+            // 
+            this.btnGhi.Caption = "Ghi";
+            this.btnGhi.Id = 3;
+            this.btnGhi.Name = "btnGhi";
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.Caption = "Làm mới";
+            this.btnLamMoi.Id = 4;
+            this.btnLamMoi.Name = "btnLamMoi";
+            // 
+            // btnPhucHoi
+            // 
+            this.btnPhucHoi.Caption = "Phục hồi";
+            this.btnPhucHoi.Id = 5;
+            this.btnPhucHoi.Name = "btnPhucHoi";
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Caption = "Thoát";
+            this.btnThoat.Id = 6;
+            this.btnThoat.Name = "btnThoat";
+            // 
+            // bar3
+            // 
+            this.bar3.BarName = "Status bar";
+            this.bar3.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
+            this.bar3.DockCol = 0;
+            this.bar3.DockRow = 0;
+            this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
+            this.bar3.OptionsBar.AllowQuickCustomization = false;
+            this.bar3.OptionsBar.DrawDragBorder = false;
+            this.bar3.OptionsBar.UseWholeRow = true;
+            this.bar3.Text = "Status bar";
             // 
             // barDockControlTop
             // 
@@ -130,7 +281,7 @@ namespace ThiTracNghiem_CSDL_PT
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1403, 25);
+            this.barDockControlTop.Size = new System.Drawing.Size(1403, 26);
             // 
             // barDockControlBottom
             // 
@@ -144,98 +295,28 @@ namespace ThiTracNghiem_CSDL_PT
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 25);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 26);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 653);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 652);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1403, 25);
+            this.barDockControlRight.Location = new System.Drawing.Point(1403, 26);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 653);
-            // 
-            // bar1
-            // 
-            this.bar1.BarName = "Tools";
-            this.bar1.DockCol = 0;
-            this.bar1.DockRow = 0;
-            this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.bar1.FloatLocation = new System.Drawing.Point(349, 171);
-            this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem2),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem3),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem4),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem5),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem6),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem7)});
-            this.bar1.Text = "Tools";
-            // 
-            // bar3
-            // 
-            this.bar3.BarName = "Status bar";
-            this.bar3.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
-            this.bar3.DockCol = 0;
-            this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
-            this.bar3.OptionsBar.AllowQuickCustomization = false;
-            this.bar3.OptionsBar.DrawDragBorder = false;
-            this.bar3.OptionsBar.UseWholeRow = true;
-            this.bar3.Text = "Status bar";
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "barButtonItem1";
-            this.barButtonItem1.Id = 0;
-            this.barButtonItem1.Name = "barButtonItem1";
-            // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Caption = "barButtonItem2";
-            this.barButtonItem2.Id = 1;
-            this.barButtonItem2.Name = "barButtonItem2";
-            // 
-            // barButtonItem3
-            // 
-            this.barButtonItem3.Caption = "barButtonItem3";
-            this.barButtonItem3.Id = 2;
-            this.barButtonItem3.Name = "barButtonItem3";
-            // 
-            // barButtonItem4
-            // 
-            this.barButtonItem4.Caption = "barButtonItem4";
-            this.barButtonItem4.Id = 3;
-            this.barButtonItem4.Name = "barButtonItem4";
-            // 
-            // barButtonItem5
-            // 
-            this.barButtonItem5.Caption = "barButtonItem5";
-            this.barButtonItem5.Id = 4;
-            this.barButtonItem5.Name = "barButtonItem5";
-            // 
-            // barButtonItem6
-            // 
-            this.barButtonItem6.Caption = "barButtonItem6";
-            this.barButtonItem6.Id = 5;
-            this.barButtonItem6.Name = "barButtonItem6";
-            // 
-            // barButtonItem7
-            // 
-            this.barButtonItem7.Caption = "barButtonItem7";
-            this.barButtonItem7.Id = 6;
-            this.barButtonItem7.Name = "barButtonItem7";
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 652);
             // 
             // gIAOVIENGridControl
             // 
             this.gIAOVIENGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gIAOVIENGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.gIAOVIENGridControl.Location = new System.Drawing.Point(727, 336);
+            this.gIAOVIENGridControl.Location = new System.Drawing.Point(727, 337);
             this.gIAOVIENGridControl.MainView = this.gridView2;
             this.gIAOVIENGridControl.Margin = new System.Windows.Forms.Padding(4);
             this.gIAOVIENGridControl.MenuManager = this.barManager1;
             this.gIAOVIENGridControl.Name = "gIAOVIENGridControl";
-            this.gIAOVIENGridControl.Size = new System.Drawing.Size(676, 342);
+            this.gIAOVIENGridControl.Size = new System.Drawing.Size(676, 341);
             this.gIAOVIENGridControl.TabIndex = 25;
             this.gIAOVIENGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -302,10 +383,10 @@ namespace ThiTracNghiem_CSDL_PT
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 336);
+            this.panel2.Location = new System.Drawing.Point(0, 337);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(727, 342);
+            this.panel2.Size = new System.Drawing.Size(727, 341);
             this.panel2.TabIndex = 26;
             // 
             // groupBox1
@@ -326,16 +407,6 @@ namespace ThiTracNghiem_CSDL_PT
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hiệu chỉnh :";
             // 
-            // mACSLabel
-            // 
-            mACSLabel.AutoSize = true;
-            mACSLabel.Location = new System.Drawing.Point(485, 75);
-            mACSLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            mACSLabel.Name = "mACSLabel";
-            mACSLabel.Size = new System.Drawing.Size(50, 17);
-            mACSLabel.TabIndex = 4;
-            mACSLabel.Text = "MACS:";
-            // 
             // txtMaCS
             // 
             this.txtMaCS.Location = new System.Drawing.Point(547, 71);
@@ -345,16 +416,6 @@ namespace ThiTracNghiem_CSDL_PT
             this.txtMaCS.Size = new System.Drawing.Size(132, 22);
             this.txtMaCS.TabIndex = 5;
             // 
-            // tENKHLabel
-            // 
-            tENKHLabel.AutoSize = true;
-            tENKHLabel.Location = new System.Drawing.Point(252, 75);
-            tENKHLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            tENKHLabel.Name = "tENKHLabel";
-            tENKHLabel.Size = new System.Drawing.Size(59, 17);
-            tENKHLabel.TabIndex = 2;
-            tENKHLabel.Text = "TENKH:";
-            // 
             // txtTenKH
             // 
             this.txtTenKH.Location = new System.Drawing.Point(323, 71);
@@ -362,16 +423,6 @@ namespace ThiTracNghiem_CSDL_PT
             this.txtTenKH.Name = "txtTenKH";
             this.txtTenKH.Size = new System.Drawing.Size(132, 22);
             this.txtTenKH.TabIndex = 3;
-            // 
-            // mAKHLabel
-            // 
-            mAKHLabel.AutoSize = true;
-            mAKHLabel.Location = new System.Drawing.Point(36, 75);
-            mAKHLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            mAKHLabel.Name = "mAKHLabel";
-            mAKHLabel.Size = new System.Drawing.Size(51, 17);
-            mAKHLabel.TabIndex = 0;
-            mAKHLabel.Text = "MAKH:";
             // 
             // txtMaKH
             // 
@@ -396,7 +447,7 @@ namespace ThiTracNghiem_CSDL_PT
             this.groupBox2.Controls.Add(mAGVLabel);
             this.groupBox2.Controls.Add(this.txtMaGV);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox2.Location = new System.Drawing.Point(0, 154);
+            this.groupBox2.Location = new System.Drawing.Point(0, 153);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
@@ -425,16 +476,6 @@ namespace ThiTracNghiem_CSDL_PT
             this.btComplete.Text = "Hoàn tất";
             this.btComplete.UseVisualStyleBackColor = true;
             // 
-            // mAKHLabel1
-            // 
-            mAKHLabel1.AutoSize = true;
-            mAKHLabel1.Location = new System.Drawing.Point(343, 95);
-            mAKHLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            mAKHLabel1.Name = "mAKHLabel1";
-            mAKHLabel1.Size = new System.Drawing.Size(51, 17);
-            mAKHLabel1.TabIndex = 8;
-            mAKHLabel1.Text = "MAKH:";
-            // 
             // txtKh
             // 
             this.txtKh.Location = new System.Drawing.Point(405, 91);
@@ -444,16 +485,6 @@ namespace ThiTracNghiem_CSDL_PT
             this.txtKh.Size = new System.Drawing.Size(132, 22);
             this.txtKh.TabIndex = 9;
             // 
-            // dIACHILabel
-            // 
-            dIACHILabel.AutoSize = true;
-            dIACHILabel.Location = new System.Drawing.Point(89, 95);
-            dIACHILabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            dIACHILabel.Name = "dIACHILabel";
-            dIACHILabel.Size = new System.Drawing.Size(56, 17);
-            dIACHILabel.TabIndex = 6;
-            dIACHILabel.Text = "DIACHI:";
-            // 
             // txtDiaChi
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(159, 91);
@@ -461,16 +492,6 @@ namespace ThiTracNghiem_CSDL_PT
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(132, 22);
             this.txtDiaChi.TabIndex = 7;
-            // 
-            // tENLabel
-            // 
-            tENLabel.AutoSize = true;
-            tENLabel.Location = new System.Drawing.Point(496, 43);
-            tENLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            tENLabel.Name = "tENLabel";
-            tENLabel.Size = new System.Drawing.Size(40, 17);
-            tENLabel.TabIndex = 4;
-            tENLabel.Text = "TEN:";
             // 
             // txtTen
             // 
@@ -480,16 +501,6 @@ namespace ThiTracNghiem_CSDL_PT
             this.txtTen.Size = new System.Drawing.Size(148, 22);
             this.txtTen.TabIndex = 5;
             // 
-            // hOLabel
-            // 
-            hOLabel.AutoSize = true;
-            hOLabel.Location = new System.Drawing.Point(267, 43);
-            hOLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            hOLabel.Name = "hOLabel";
-            hOLabel.Size = new System.Drawing.Size(33, 17);
-            hOLabel.TabIndex = 2;
-            hOLabel.Text = "HO:";
-            // 
             // txtHo
             // 
             this.txtHo.Location = new System.Drawing.Point(309, 39);
@@ -497,16 +508,6 @@ namespace ThiTracNghiem_CSDL_PT
             this.txtHo.Name = "txtHo";
             this.txtHo.Size = new System.Drawing.Size(132, 22);
             this.txtHo.TabIndex = 3;
-            // 
-            // mAGVLabel
-            // 
-            mAGVLabel.AutoSize = true;
-            mAGVLabel.Location = new System.Drawing.Point(28, 43);
-            mAGVLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            mAGVLabel.Name = "mAGVLabel";
-            mAGVLabel.Size = new System.Drawing.Size(52, 17);
-            mAGVLabel.TabIndex = 0;
-            mAGVLabel.Text = "MAGV:";
             // 
             // txtMaGV
             // 
@@ -520,7 +521,7 @@ namespace ThiTracNghiem_CSDL_PT
             // 
             this.panel1.Controls.Add(this.kHOAGridControl);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 98);
+            this.panel1.Location = new System.Drawing.Point(0, 99);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1403, 238);
@@ -582,7 +583,7 @@ namespace ThiTracNghiem_CSDL_PT
             this.panelControl1.Controls.Add(this.cmbCoSo);
             this.panelControl1.Controls.Add(this.lbCoSo);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 25);
+            this.panelControl1.Location = new System.Drawing.Point(0, 26);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1403, 73);
@@ -611,10 +612,10 @@ namespace ThiTracNghiem_CSDL_PT
             // 
             this.barDockControl1.CausesValidation = false;
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControl1.Location = new System.Drawing.Point(0, 25);
+            this.barDockControl1.Location = new System.Drawing.Point(0, 26);
             this.barDockControl1.Manager = this.barManager1;
             this.barDockControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControl1.Size = new System.Drawing.Size(0, 653);
+            this.barDockControl1.Size = new System.Drawing.Size(0, 652);
             // 
             // frmKhoa
             // 
@@ -654,18 +655,18 @@ namespace ThiTracNghiem_CSDL_PT
         #endregion
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.Bar bar1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem btnThem;
         private DevExpress.XtraBars.Bar bar3;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem6;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+        private DevExpress.XtraBars.BarButtonItem btnXoa;
+        private DevExpress.XtraBars.BarButtonItem btnSua;
+        private DevExpress.XtraBars.BarButtonItem btnGhi;
+        private DevExpress.XtraBars.BarButtonItem btnLamMoi;
+        private DevExpress.XtraBars.BarButtonItem btnPhucHoi;
+        private DevExpress.XtraBars.BarButtonItem btnThoat;
         private DevExpress.XtraGrid.GridControl gIAOVIENGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.Columns.GridColumn colMAGV;

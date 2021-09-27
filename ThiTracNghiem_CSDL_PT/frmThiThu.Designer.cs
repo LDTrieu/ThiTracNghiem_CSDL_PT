@@ -106,6 +106,7 @@ namespace ThiTracNghiem_CSDL_PT
             this.lblNOIDUNG.Size = new System.Drawing.Size(1072, 160);
             this.lblNOIDUNG.TabIndex = 10;
             this.lblNOIDUNG.Text = "";
+            this.lblNOIDUNG.TextChanged += new System.EventHandler(this.lblNOIDUNG_TextChanged);
             // 
             // lblCHUYENDENCAU
             // 

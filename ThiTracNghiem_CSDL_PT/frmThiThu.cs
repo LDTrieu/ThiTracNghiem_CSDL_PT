@@ -21,5 +21,10 @@ namespace ThiTracNghiem_CSDL_PT
         {
 
         }
+
+        private void lblNOIDUNG_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

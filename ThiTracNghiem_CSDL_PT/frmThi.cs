@@ -16,5 +16,11 @@ namespace ThiTracNghiem_CSDL_PT
         {
             InitializeComponent();
         }
+
+        private void btnBDTHI_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

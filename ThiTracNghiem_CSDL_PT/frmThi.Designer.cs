@@ -158,6 +158,7 @@ namespace ThiTracNghiem_CSDL_PT
             this.btnBDTHI.TabIndex = 17;
             this.btnBDTHI.Text = "BẮT ĐẦU THI";
             this.btnBDTHI.UseVisualStyleBackColor = true;
+            this.btnBDTHI.Click += new System.EventHandler(this.btnBDTHI_Click);
             // 
             // groupBox1
             // 
