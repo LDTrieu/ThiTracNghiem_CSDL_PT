@@ -14,7 +14,9 @@ namespace ThiTracNghiem_CSDL_PT
 {
     public partial class frmDangNhap : Form
     {
-        private SqlConnection conn_publisher = new SqlConnection();
+        //private SqlConnection conn_publisher = new SqlConnection();
+        SqlConnection conn_publisher = new SqlConnection(@"Data Source=DESKTOP-00R6U3E;Initial Catalog=THI_TN;Integrated Security=True");
+
         public frmDangNhap()
         {
             InitializeComponent();
@@ -23,9 +25,14 @@ namespace ThiTracNghiem_CSDL_PT
 
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
-
+            if (KetNoi_CSDLGOC() == 0)
+                return;
+            LayDSPM("SELECT * FROM Get_Subscribes WHERE TENCS <> 'TRA CUU'");
+            cmbCoSo.SelectedIndex = 1;
+            cmbCoSo.SelectedIndex = 0;
+            MessageBox.Show("RRR");
         }
-        
+
         private void LayDSPM(String cmd)
         {
             DataTable dt = new DataTable();
@@ -36,28 +43,33 @@ namespace ThiTracNghiem_CSDL_PT
             Program.bds_dspm.DataSource = dt;
             cmbCoSo.DataSource = Program.bds_dspm;
             cmbCoSo.DisplayMember = "TENCS";
-            cmbCoSo.ValueMember = "TENSERVER";
-            MessageBox.Show("AAA");
-
+            //cmbCoSo.ValueMember = "TENSERVER";
+            MessageBox.Show("FFF");
         }
-        private int KetNoiCSDLGOC()
+        private int KetNoi_CSDLGOC()
         {
             if (conn_publisher != null && conn_publisher.State == ConnectionState.Open)
                 conn_publisher.Close();
             try
             {
                 conn_publisher.ConnectionString = Program.connstr_publisher;
-                conn_publisher.Open();
                 //MessageBox.Show("BBBB");
+                conn_publisher.Open();
                 return 1;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                MessageBox.Show("Lỗi kết nối về ABC CSDL gốc.\n Bạn xem lại trên Server của Publisher và tên CSDL trong chuỗi kết nối. \n" + e.Message);
+                MessageBox.Show("Lỗi kết nối về ABC CSDL gốc.\n Bạn xem lại trên Server của Publisher và tên CSDL trong chuỗi kết nối. \n"
+                    + e.Message);
                 return 0;
             }
         }
+        private String getID(String username,string pass)
+        {
+            string id = "";
 
+            return id;
+        }
         private void cmbGiangVienTheoCS_SelectedIndexChanged(object sender, EventArgs e)
         {
 
