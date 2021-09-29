@@ -222,6 +222,7 @@ namespace ThiTracNghiem_CSDL_PT
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
             this.btnThem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.LargeImage")));
             this.btnThem.Name = "btnThem";
+            this.btnThem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThem_ItemClick);
             // 
             // btnXoa
             // 
@@ -262,6 +263,7 @@ namespace ThiTracNghiem_CSDL_PT
             this.btnPhucHoi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPhucHoi.ImageOptions.Image")));
             this.btnPhucHoi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPhucHoi.ImageOptions.LargeImage")));
             this.btnPhucHoi.Name = "btnPhucHoi";
+            this.btnPhucHoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPhucHoi_ItemClick);
             // 
             // btnThoat
             // 
@@ -270,6 +272,7 @@ namespace ThiTracNghiem_CSDL_PT
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
             this.btnThoat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.LargeImage")));
             this.btnThoat.Name = "btnThoat";
+            this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThoat_ItemClick);
             // 
             // bar3
             // 
@@ -427,6 +430,7 @@ namespace ThiTracNghiem_CSDL_PT
             this.cmbMaGV.Size = new System.Drawing.Size(160, 24);
             this.cmbMaGV.TabIndex = 1;
             this.cmbMaGV.ValueMember = "MAGV";
+            this.cmbMaGV.SelectedIndexChanged += new System.EventHandler(this.cmbMaGV_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -615,6 +619,7 @@ namespace ThiTracNghiem_CSDL_PT
             this.Controls.Add(this.barDockControlTop);
             this.Name = "frmDSDK";
             this.Text = "Danh sách đăng ký";
+            this.Load += new System.EventHandler(this.frmDSDK_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

@@ -30,153 +30,164 @@ namespace ThiTracNghiem_CSDL_PT
         private void InitializeComponent()
         {
             this.gbTaoLogin = new System.Windows.Forms.GroupBox();
-            this.lbLogin = new System.Windows.Forms.Label();
-            this.lbMatKhau = new System.Windows.Forms.Label();
-            this.txtLoginName = new System.Windows.Forms.TextBox();
+            this.rdSinhVien = new System.Windows.Forms.RadioButton();
+            this.rdGiangVien = new System.Windows.Forms.RadioButton();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnDangNhap = new System.Windows.Forms.Button();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
-            this.btnTaoLogin = new System.Windows.Forms.Button();
-            this.btnHuyTao = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmdNhomQuyen = new System.Windows.Forms.ComboBox();
-            this.cmbGiangVienTheoCS = new System.Windows.Forms.ComboBox();
-            this.checkbox_Pass = new System.Windows.Forms.CheckBox();
+            this.txtTaiKhoan = new System.Windows.Forms.TextBox();
+            this.lbMatKhau = new System.Windows.Forms.Label();
+            this.lbTaiKhoan = new System.Windows.Forms.Label();
+            this.cmbCoSo = new System.Windows.Forms.ComboBox();
+            this.lbCoSo = new System.Windows.Forms.Label();
             this.gbTaoLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbTaoLogin
             // 
-            this.gbTaoLogin.Controls.Add(this.checkbox_Pass);
-            this.gbTaoLogin.Controls.Add(this.cmbGiangVienTheoCS);
-            this.gbTaoLogin.Controls.Add(this.cmdNhomQuyen);
-            this.gbTaoLogin.Controls.Add(this.label3);
-            this.gbTaoLogin.Controls.Add(this.label2);
-            this.gbTaoLogin.Controls.Add(this.label1);
-            this.gbTaoLogin.Controls.Add(this.btnHuyTao);
-            this.gbTaoLogin.Controls.Add(this.btnTaoLogin);
+            this.gbTaoLogin.Controls.Add(this.rdSinhVien);
+            this.gbTaoLogin.Controls.Add(this.rdGiangVien);
+            this.gbTaoLogin.Controls.Add(this.btnThoat);
+            this.gbTaoLogin.Controls.Add(this.btnDangNhap);
             this.gbTaoLogin.Controls.Add(this.txtMatKhau);
-            this.gbTaoLogin.Controls.Add(this.txtLoginName);
+            this.gbTaoLogin.Controls.Add(this.txtTaiKhoan);
             this.gbTaoLogin.Controls.Add(this.lbMatKhau);
-            this.gbTaoLogin.Controls.Add(this.lbLogin);
-            this.gbTaoLogin.Location = new System.Drawing.Point(12, 12);
+            this.gbTaoLogin.Controls.Add(this.lbTaiKhoan);
+            this.gbTaoLogin.Controls.Add(this.cmbCoSo);
+            this.gbTaoLogin.Controls.Add(this.lbCoSo);
+            this.gbTaoLogin.Location = new System.Drawing.Point(14, 12);
             this.gbTaoLogin.Name = "gbTaoLogin";
-            this.gbTaoLogin.Size = new System.Drawing.Size(820, 425);
+            this.gbTaoLogin.Size = new System.Drawing.Size(937, 425);
             this.gbTaoLogin.TabIndex = 0;
             this.gbTaoLogin.TabStop = false;
             this.gbTaoLogin.Text = "Nhập thông tin";
             // 
-            // lbLogin
+            // rdSinhVien
             // 
-            this.lbLogin.AutoSize = true;
-            this.lbLogin.Location = new System.Drawing.Point(131, 135);
-            this.lbLogin.Name = "lbLogin";
-            this.lbLogin.Size = new System.Drawing.Size(84, 17);
-            this.lbLogin.TabIndex = 3;
-            this.lbLogin.Text = "Login name:";
+            this.rdSinhVien.AutoSize = true;
+            this.rdSinhVien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdSinhVien.Location = new System.Drawing.Point(521, 69);
+            this.rdSinhVien.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.rdSinhVien.Name = "rdSinhVien";
+            this.rdSinhVien.Size = new System.Drawing.Size(106, 27);
+            this.rdSinhVien.TabIndex = 19;
+            this.rdSinhVien.TabStop = true;
+            this.rdSinhVien.Text = "Sinh viên";
+            this.rdSinhVien.UseVisualStyleBackColor = true;
+            this.rdSinhVien.CheckedChanged += new System.EventHandler(this.rdSinhVien_CheckedChanged);
+            // 
+            // rdGiangVien
+            // 
+            this.rdGiangVien.AutoSize = true;
+            this.rdGiangVien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdGiangVien.Location = new System.Drawing.Point(266, 69);
+            this.rdGiangVien.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.rdGiangVien.Name = "rdGiangVien";
+            this.rdGiangVien.Size = new System.Drawing.Size(121, 27);
+            this.rdGiangVien.TabIndex = 18;
+            this.rdGiangVien.TabStop = true;
+            this.rdGiangVien.Text = "Giảng viên";
+            this.rdGiangVien.UseVisualStyleBackColor = true;
+            this.rdGiangVien.CheckedChanged += new System.EventHandler(this.rdGiangVien_CheckedChanged);
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Location = new System.Drawing.Point(510, 319);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(145, 37);
+            this.btnThoat.TabIndex = 17;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // btnDangNhap
+            // 
+            this.btnDangNhap.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.Location = new System.Drawing.Point(295, 319);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(145, 37);
+            this.btnDangNhap.TabIndex = 16;
+            this.btnDangNhap.Text = "Đăng nhập";
+            this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+            // 
+            // txtMatKhau
+            // 
+            this.txtMatKhau.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.Location = new System.Drawing.Point(426, 247);
+            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '*';
+            this.txtMatKhau.Size = new System.Drawing.Size(259, 29);
+            this.txtMatKhau.TabIndex = 15;
+            // 
+            // txtTaiKhoan
+            // 
+            this.txtTaiKhoan.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTaiKhoan.Location = new System.Drawing.Point(426, 187);
+            this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.txtTaiKhoan.Name = "txtTaiKhoan";
+            this.txtTaiKhoan.Size = new System.Drawing.Size(259, 29);
+            this.txtTaiKhoan.TabIndex = 14;
+            this.txtTaiKhoan.TextChanged += new System.EventHandler(this.txtTaiKhoan_TextChanged);
             // 
             // lbMatKhau
             // 
             this.lbMatKhau.AutoSize = true;
-            this.lbMatKhau.Location = new System.Drawing.Point(134, 185);
+            this.lbMatKhau.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMatKhau.Location = new System.Drawing.Point(251, 251);
+            this.lbMatKhau.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbMatKhau.Name = "lbMatKhau";
-            this.lbMatKhau.Size = new System.Drawing.Size(71, 17);
-            this.lbMatKhau.TabIndex = 4;
-            this.lbMatKhau.Text = "Password:";
+            this.lbMatKhau.Size = new System.Drawing.Size(90, 22);
+            this.lbMatKhau.TabIndex = 13;
+            this.lbMatKhau.Text = "Mật khẩu";
             // 
-            // txtLoginName
+            // lbTaiKhoan
             // 
-            this.txtLoginName.Location = new System.Drawing.Point(293, 135);
-            this.txtLoginName.Name = "txtLoginName";
-            this.txtLoginName.Size = new System.Drawing.Size(244, 23);
-            this.txtLoginName.TabIndex = 5;
+            this.lbTaiKhoan.AutoSize = true;
+            this.lbTaiKhoan.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTaiKhoan.Location = new System.Drawing.Point(251, 191);
+            this.lbTaiKhoan.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbTaiKhoan.Name = "lbTaiKhoan";
+            this.lbTaiKhoan.Size = new System.Drawing.Size(94, 22);
+            this.lbTaiKhoan.TabIndex = 12;
+            this.lbTaiKhoan.Text = "Tài khoản";
+            this.lbTaiKhoan.Click += new System.EventHandler(this.lbTaiKhoan_Click);
             // 
-            // txtMatKhau
+            // cmbCoSo
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(293, 182);
-            this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(244, 23);
-            this.txtMatKhau.TabIndex = 6;
+            this.cmbCoSo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCoSo.FormattingEnabled = true;
+            this.cmbCoSo.Location = new System.Drawing.Point(426, 127);
+            this.cmbCoSo.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.cmbCoSo.Name = "cmbCoSo";
+            this.cmbCoSo.Size = new System.Drawing.Size(259, 30);
+            this.cmbCoSo.TabIndex = 11;
+            this.cmbCoSo.SelectedIndexChanged += new System.EventHandler(this.cmbCoSo_SelectedIndexChanged);
             // 
-            // btnTaoLogin
+            // lbCoSo
             // 
-            this.btnTaoLogin.Location = new System.Drawing.Point(228, 328);
-            this.btnTaoLogin.Name = "btnTaoLogin";
-            this.btnTaoLogin.Size = new System.Drawing.Size(120, 33);
-            this.btnTaoLogin.TabIndex = 7;
-            this.btnTaoLogin.Text = "Tạo Login";
-            this.btnTaoLogin.UseVisualStyleBackColor = true;
-            // 
-            // btnHuyTao
-            // 
-            this.btnHuyTao.Location = new System.Drawing.Point(389, 323);
-            this.btnHuyTao.Name = "btnHuyTao";
-            this.btnHuyTao.Size = new System.Drawing.Size(119, 38);
-            this.btnHuyTao.TabIndex = 8;
-            this.btnHuyTao.Text = "Hủy tạo";
-            this.btnHuyTao.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(301, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 17);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Tạo Login";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(137, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 17);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Giảng viên:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(140, 267);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 17);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Nhóm quyền:";
-            // 
-            // cmdNhomQuyen
-            // 
-            this.cmdNhomQuyen.FormattingEnabled = true;
-            this.cmdNhomQuyen.Location = new System.Drawing.Point(293, 267);
-            this.cmdNhomQuyen.Name = "cmdNhomQuyen";
-            this.cmdNhomQuyen.Size = new System.Drawing.Size(244, 24);
-            this.cmdNhomQuyen.TabIndex = 12;
-            // 
-            // cmbGiangVienTheoCS
-            // 
-            this.cmbGiangVienTheoCS.FormattingEnabled = true;
-            this.cmbGiangVienTheoCS.Location = new System.Drawing.Point(293, 79);
-            this.cmbGiangVienTheoCS.Name = "cmbGiangVienTheoCS";
-            this.cmbGiangVienTheoCS.Size = new System.Drawing.Size(244, 24);
-            this.cmbGiangVienTheoCS.TabIndex = 13;
-            // 
-            // checkbox_Pass
-            // 
-            this.checkbox_Pass.AutoSize = true;
-            this.checkbox_Pass.Location = new System.Drawing.Point(570, 185);
-            this.checkbox_Pass.Name = "checkbox_Pass";
-            this.checkbox_Pass.Size = new System.Drawing.Size(137, 21);
-            this.checkbox_Pass.TabIndex = 14;
-            this.checkbox_Pass.Text = "Hiển thị Password";
-            this.checkbox_Pass.UseVisualStyleBackColor = true;
+            this.lbCoSo.AutoSize = true;
+            this.lbCoSo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCoSo.Location = new System.Drawing.Point(251, 130);
+            this.lbCoSo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbCoSo.Name = "lbCoSo";
+            this.lbCoSo.Size = new System.Drawing.Size(59, 22);
+            this.lbCoSo.TabIndex = 10;
+            this.lbCoSo.Text = "Cơ sở";
             // 
             // frmDangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 449);
+            this.ClientSize = new System.Drawing.Size(991, 449);
             this.Controls.Add(this.gbTaoLogin);
             this.Name = "frmDangNhap";
             this.Text = "Đăng Nhập";
+            this.Load += new System.EventHandler(this.frmDangNhap_Load);
             this.gbTaoLogin.ResumeLayout(false);
             this.gbTaoLogin.PerformLayout();
             this.ResumeLayout(false);
@@ -186,17 +197,15 @@ namespace ThiTracNghiem_CSDL_PT
         #endregion
 
         private System.Windows.Forms.GroupBox gbTaoLogin;
-        private System.Windows.Forms.Button btnHuyTao;
-        private System.Windows.Forms.Button btnTaoLogin;
+        private System.Windows.Forms.RadioButton rdSinhVien;
+        private System.Windows.Forms.RadioButton rdGiangVien;
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.TextBox txtMatKhau;
-        private System.Windows.Forms.TextBox txtLoginName;
+        private System.Windows.Forms.TextBox txtTaiKhoan;
         private System.Windows.Forms.Label lbMatKhau;
-        private System.Windows.Forms.Label lbLogin;
-        private System.Windows.Forms.CheckBox checkbox_Pass;
-        private System.Windows.Forms.ComboBox cmbGiangVienTheoCS;
-        private System.Windows.Forms.ComboBox cmdNhomQuyen;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbTaiKhoan;
+        private System.Windows.Forms.ComboBox cmbCoSo;
+        private System.Windows.Forms.Label lbCoSo;
     }
 }

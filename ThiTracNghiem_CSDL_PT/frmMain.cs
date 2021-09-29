@@ -16,8 +16,47 @@ namespace ThiTracNghiem_CSDL_PT
             InitializeComponent();
         }
 
+        private Form CheckExists(Type ftype)
+        {
+            foreach (Form f in this.MdiChildren)
+                if (f.GetType() == ftype)
+                    return f;
+            return null;
+        }
+
         private void btnKhoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+
+        }
+
+        private void btnDangNhap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmDangNhap));
+            if (frm != null) frm.Activate();
+            else
+            {
+
+                frmDangNhap f = new frmDangNhap();
+                //MessageBox.Show("AAAAAA");
+                f.MdiParent = this;
+                f.Show();
+                //MessageBox.Show("AAAAAA");
+            }
+        }
+
+        private void btnDangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "CẢNH BÁO",
+                MessageBoxButtons.OKCancel);
+            if(dialogResult==DialogResult.OK)
+            {
+                Program.username = "";
+                Program.mlogin = "";
+                Program.password = "";
+
+                Close();
+                Program.frmChinh.Close();
+            }
 
         }
     }
