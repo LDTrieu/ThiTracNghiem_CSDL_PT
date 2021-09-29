@@ -59,5 +59,22 @@ namespace ThiTracNghiem_CSDL_PT
             }
 
         }
+        private void HienThiMenu()
+        {
+            MAGV.Text = "Mã GV :" + Program.username;
+            HOTEN.Text = "Họ tên :" + Program.mHoten;
+            NHOM.Text = "Nhóm :" + Program.mGroup;
+            // Phân quyền
+            rbBaoCao.Visible=rbDanhMuc.Visible=rbNghiepVu.Visible=true;
+        }
+        private void MAGV_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

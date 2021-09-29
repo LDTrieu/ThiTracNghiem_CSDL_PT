@@ -55,7 +55,12 @@ namespace ThiTracNghiem_CSDL_PT
             this.rbBaoCao = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.MAGV = new System.Windows.Forms.ToolStripStatusLabel();
+            this.HOTEN = new System.Windows.Forms.ToolStripStatusLabel();
+            this.NHOM = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -83,7 +88,7 @@ namespace ThiTracNghiem_CSDL_PT
             this.rbDanhMuc,
             this.rbNghiepVu,
             this.rbBaoCao});
-            this.ribbonControl1.Size = new System.Drawing.Size(884, 193);
+            this.ribbonControl1.Size = new System.Drawing.Size(916, 193);
             // 
             // btnDangNhap
             // 
@@ -243,17 +248,53 @@ namespace ThiTracNghiem_CSDL_PT
             this.ribbonPageGroup10.ItemLinks.Add(this.btnXemDSDK);
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MAGV,
+            this.HOTEN,
+            this.NHOM});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 466);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(916, 26);
+            this.statusStrip1.TabIndex = 2;
+            this.statusStrip1.Text = "statusStrip1";
+            this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
+            // 
+            // MAGV
+            // 
+            this.MAGV.Name = "MAGV";
+            this.MAGV.Size = new System.Drawing.Size(51, 20);
+            this.MAGV.Text = "MAGV";
+            this.MAGV.Click += new System.EventHandler(this.MAGV_Click);
+            // 
+            // HOTEN
+            // 
+            this.HOTEN.Name = "HOTEN";
+            this.HOTEN.Size = new System.Drawing.Size(57, 20);
+            this.HOTEN.Text = "HOTEN";
+            // 
+            // NHOM
+            // 
+            this.NHOM.Name = "NHOM";
+            this.NHOM.Size = new System.Drawing.Size(55, 20);
+            this.NHOM.Text = "NHOM";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 443);
+            this.ClientSize = new System.Drawing.Size(916, 492);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMain";
             this.Ribbon = this.ribbonControl1;
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,6 +327,10 @@ namespace ThiTracNghiem_CSDL_PT
         private DevExpress.XtraBars.BarButtonItem btnTaoLogin;
         private DevExpress.XtraBars.BarButtonItem btnXemBangDiem;
         private DevExpress.XtraBars.BarButtonItem btnXemDSDK;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel MAGV;
+        private System.Windows.Forms.ToolStripStatusLabel HOTEN;
+        private System.Windows.Forms.ToolStripStatusLabel NHOM;
     }
 }
 

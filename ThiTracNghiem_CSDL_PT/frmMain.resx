@@ -811,4 +811,7 @@
         BV0XgGMVls0dTHX7onG+d7caE/jbb0OjNPTb8P9C2jEDxOTAeDvK6wAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>
