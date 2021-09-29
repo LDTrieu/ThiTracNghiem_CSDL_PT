@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v19.2" />
     <Reference Include="DevExpress.Data.v19.2" />
@@ -42,7 +45,10 @@
     <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -54,6 +60,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfirmForm.cs" />
+    <Compile Include="DBConnection.cs" />
     <Compile Include="DS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -151,6 +159,17 @@
     <Compile Include="frmXemDSDK.Designer.cs">
       <DependentUpon>frmXemDSDK.cs</DependentUpon>
     </Compile>
+    <Compile Include="testSql1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>testSql1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TN_CSDLPTDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TN_CSDLPTDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Utils.cs" />
     <EmbeddedResource Include="frmLamBaiThi.resx">
       <DependentUpon>frmLamBaiThi.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,6 +246,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="testSql1DataSet.xsc">
+      <DependentUpon>testSql1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="testSql1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>testSql1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="testSql1DataSet.xss">
+      <DependentUpon>testSql1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TN_CSDLPTDataSet.xsc">
+      <DependentUpon>TN_CSDLPTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TN_CSDLPTDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TN_CSDLPTDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TN_CSDLPTDataSet.xss">
+      <DependentUpon>TN_CSDLPTDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />

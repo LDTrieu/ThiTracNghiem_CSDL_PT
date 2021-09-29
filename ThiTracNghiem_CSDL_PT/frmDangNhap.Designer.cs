@@ -61,6 +61,7 @@ namespace ThiTracNghiem_CSDL_PT
             this.gbTaoLogin.TabIndex = 0;
             this.gbTaoLogin.TabStop = false;
             this.gbTaoLogin.Text = "Nhập thông tin";
+            this.gbTaoLogin.Enter += new System.EventHandler(this.gbTaoLogin_Enter);
             // 
             // rdSinhVien
             // 

@@ -37,7 +37,7 @@ namespace ThiTracNghiem_CSDL_PT
             {
 
                 frmDangNhap f = new frmDangNhap();
-                //MessageBox.Show("AAAAAA");
+                MessageBox.Show("Chechpoint 40");
                 f.MdiParent = this;
                 f.Show();
                 //MessageBox.Show("AAAAAA");
@@ -73,6 +73,11 @@ namespace ThiTracNghiem_CSDL_PT
         }
 
         private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void btnTaoLogin_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
         }
