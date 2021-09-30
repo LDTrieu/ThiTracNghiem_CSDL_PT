@@ -118,5 +118,10 @@ namespace ThiTracNghiem_CSDL_PT
         {
 
         }
+
+        private void gbTaoLogin_Enter(object sender, EventArgs e)
+        {
+            // hiii
+        }
     }
 }
