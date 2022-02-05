@@ -39,13 +39,14 @@ namespace ThiTracNghiem_CSDL_PT
             //if (result == DialogResult.Yes) return true;
             //else return false;
             ConfirmForm confirmForm = new ConfirmForm(text, title);
-            return confirmForm.Confirmed;
+            //return confirmForm.Confirmed;
+            return true;
         }
 
-        public static void ShowMessage(string message, NotiForm.FormType type, int lineNum)
-        {
-            NotiForm frm = new NotiForm(message, type, lineNum); // Xuat Form thuong
-        }
+        //public static void ShowMessage(string message, NotiForm.FormType type, int lineNum)
+        //{
+        //    //NotiForm frm = new NotiForm(message, type, lineNum); // Xuat Form thuong
+        //}
 
         public enum RegexType
         {
@@ -100,7 +101,7 @@ namespace ThiTracNghiem_CSDL_PT
             return result.Trim();
         }
 
-        public static void SetTextEditError(ErrorProvider ep, BaseEdit textEdit, string errorMessage)
+        /*public static void SetTextEditError(ErrorProvider ep, BaseEdit textEdit, string errorMessage)
         {
             textEdit.Properties.Appearance.Options.UseBorderColor = true;
             textEdit.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
@@ -115,6 +116,7 @@ namespace ThiTracNghiem_CSDL_PT
                 ep.SetError(textEdit, null);
             }
         }
+        */
 
         public static bool InControl(Control control)
         {

@@ -37,7 +37,7 @@ namespace ThiTracNghiem_CSDL_PT
             {
 
                 frmDangNhap f = new frmDangNhap();
-                MessageBox.Show("Chechpoint 40");
+                //MessageBox.Show("Chechpoint 40");
                 f.MdiParent = this;
                 f.Show();
                 //MessageBox.Show("AAAAAA");

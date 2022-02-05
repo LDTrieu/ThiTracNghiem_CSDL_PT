@@ -30,8 +30,6 @@ namespace ThiTracNghiem_CSDL_PT
         private void InitializeComponent()
         {
             this.gbTaoLogin = new System.Windows.Forms.GroupBox();
-            this.rdSinhVien = new System.Windows.Forms.RadioButton();
-            this.rdGiangVien = new System.Windows.Forms.RadioButton();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
@@ -40,6 +38,9 @@ namespace ThiTracNghiem_CSDL_PT
             this.lbTaiKhoan = new System.Windows.Forms.Label();
             this.cmbCoSo = new System.Windows.Forms.ComboBox();
             this.lbCoSo = new System.Windows.Forms.Label();
+            this.rdSinhVien = new System.Windows.Forms.RadioButton();
+            this.rdGiangVien = new System.Windows.Forms.RadioButton();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.gbTaoLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,34 +63,6 @@ namespace ThiTracNghiem_CSDL_PT
             this.gbTaoLogin.TabStop = false;
             this.gbTaoLogin.Text = "Nhập thông tin";
             this.gbTaoLogin.Enter += new System.EventHandler(this.gbTaoLogin_Enter);
-            // 
-            // rdSinhVien
-            // 
-            this.rdSinhVien.AutoSize = true;
-            this.rdSinhVien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdSinhVien.Location = new System.Drawing.Point(521, 69);
-            this.rdSinhVien.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.rdSinhVien.Name = "rdSinhVien";
-            this.rdSinhVien.Size = new System.Drawing.Size(106, 27);
-            this.rdSinhVien.TabIndex = 19;
-            this.rdSinhVien.TabStop = true;
-            this.rdSinhVien.Text = "Sinh viên";
-            this.rdSinhVien.UseVisualStyleBackColor = true;
-            this.rdSinhVien.CheckedChanged += new System.EventHandler(this.rdSinhVien_CheckedChanged);
-            // 
-            // rdGiangVien
-            // 
-            this.rdGiangVien.AutoSize = true;
-            this.rdGiangVien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdGiangVien.Location = new System.Drawing.Point(266, 69);
-            this.rdGiangVien.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.rdGiangVien.Name = "rdGiangVien";
-            this.rdGiangVien.Size = new System.Drawing.Size(121, 27);
-            this.rdGiangVien.TabIndex = 18;
-            this.rdGiangVien.TabStop = true;
-            this.rdGiangVien.Text = "Giảng viên";
-            this.rdGiangVien.UseVisualStyleBackColor = true;
-            this.rdGiangVien.CheckedChanged += new System.EventHandler(this.rdGiangVien_CheckedChanged);
             // 
             // btnThoat
             // 
@@ -180,6 +153,38 @@ namespace ThiTracNghiem_CSDL_PT
             this.lbCoSo.TabIndex = 10;
             this.lbCoSo.Text = "Cơ sở";
             // 
+            // rdSinhVien
+            // 
+            this.rdSinhVien.AutoSize = true;
+            this.rdSinhVien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdSinhVien.Location = new System.Drawing.Point(579, 69);
+            this.rdSinhVien.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.rdSinhVien.Name = "rdSinhVien";
+            this.rdSinhVien.Size = new System.Drawing.Size(106, 27);
+            this.rdSinhVien.TabIndex = 19;
+            this.rdSinhVien.TabStop = true;
+            this.rdSinhVien.Text = "Sinh viên";
+            this.rdSinhVien.UseVisualStyleBackColor = true;
+            this.rdSinhVien.CheckedChanged += new System.EventHandler(this.rdSinhVien_CheckedChanged);
+            // 
+            // rdGiangVien
+            // 
+            this.rdGiangVien.AutoSize = true;
+            this.rdGiangVien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdGiangVien.Location = new System.Drawing.Point(426, 69);
+            this.rdGiangVien.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.rdGiangVien.Name = "rdGiangVien";
+            this.rdGiangVien.Size = new System.Drawing.Size(121, 27);
+            this.rdGiangVien.TabIndex = 18;
+            this.rdGiangVien.TabStop = true;
+            this.rdGiangVien.Text = "Giảng viên";
+            this.rdGiangVien.UseVisualStyleBackColor = true;
+            this.rdGiangVien.CheckedChanged += new System.EventHandler(this.rdGiangVien_CheckedChanged);
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
             // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -198,8 +203,6 @@ namespace ThiTracNghiem_CSDL_PT
         #endregion
 
         private System.Windows.Forms.GroupBox gbTaoLogin;
-        private System.Windows.Forms.RadioButton rdSinhVien;
-        private System.Windows.Forms.RadioButton rdGiangVien;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.TextBox txtMatKhau;
@@ -208,5 +211,8 @@ namespace ThiTracNghiem_CSDL_PT
         private System.Windows.Forms.Label lbTaiKhoan;
         private System.Windows.Forms.ComboBox cmbCoSo;
         private System.Windows.Forms.Label lbCoSo;
+        private System.Windows.Forms.RadioButton rdSinhVien;
+        private System.Windows.Forms.RadioButton rdGiangVien;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

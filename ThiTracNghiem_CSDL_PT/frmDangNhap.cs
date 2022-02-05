@@ -16,33 +16,55 @@ namespace ThiTracNghiem_CSDL_PT
     {
         //private SqlConnection conn_publisher = new SqlConnection();
         //string connectString= @"Data Source=DESKTOP-00R6U3E;Initial Catalog=THI_TN;Integrated Security=True";
-        SqlConnection conn_publisher = new SqlConnection(@"Data Source=DESKTOP-00R6U3E;Initial Catalog=TN_CSDLPT;Integrated Security=True");
+        //SqlConnection conn_publisher = new SqlConnection(@"Data Source=DESKTOP-00R6U3E;Initial Catalog=THI_TN;Integrated Security=True");
 
         public frmDangNhap()
         {
             InitializeComponent();
-            //IntializeUI();
+            InitializeUI();
         }
 
         private void InitializeUI()
         {
-            //DataTable dataTable = GetSubscrible();
+            DataTable dataTable = GetSubcriber();
+            if (dataTable == null)
+            {
+                return;
+            }
+            cmbCoSo.DataSource = DBConnection.BsSubcribers.DataSource = dataTable;
+            cmbCoSo.DisplayMember = "FullInfo";
+            cmbCoSo.ValueMember = "TENSERVER";
+            cmbCoSo.SelectedItem = -1;     
+        }
 
+
+        private DataTable GetSubcriber()
+        {
+            if (!DBConnection.ConnectToPublisher())
+            {
+                MessageBox.Show("Kết nối đến CSDL thất bại. " + "" +
+                    " Vui lòng xem lại tên server và tên CDL trong chuỗi kết nối");
+                return null;
+            }
+            string query = "SELECT * FROM view_GetSubcribers";
+            DataTable dataTable = new DataTable();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(query, DBConnection.PublisherConnection);
+            dataAdapter.Fill(dataTable);
+            DBConnection.PublisherConnection.Close();
+            return dataTable;
         }
         
-        private void GetSubscrible()
-        {
-            //if(!DBCon)
-        }
+        
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
-            rdGiangVien.AutoCheck = true;
+           
+            //rdGiangVien.AutoCheck = true;
             if (KetNoi_CSDLGOC() == 0)
                 return;
             LayDSPM("SELECT * FROM Get_Subscribes WHERE TENCS <> 'TRA CUU'");
             //cmbCoSo.SelectedIndex = 1;
             //cmbCoSo.SelectedIndex = 0;
-            MessageBox.Show("tttt");
+            //MessageBox.Show("tttt");
             /*try
             {
                 //Integrated Security=True--> Kết nối về site chủ không cần password và tài khoản
@@ -177,6 +199,18 @@ namespace ThiTracNghiem_CSDL_PT
         }
 
         private void gbTaoLogin_Enter(object sender, EventArgs e)
+        {
+            //rdGiangVien.AutoCheck = true;
+            //MessageBox.Show("check point rdGiangVien");
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
 
         }
