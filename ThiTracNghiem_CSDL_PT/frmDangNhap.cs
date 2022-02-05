@@ -94,7 +94,7 @@ namespace ThiTracNghiem_CSDL_PT
 
         private void LayDSPM(String cmd)
         {
-            try
+            /*try
             {
                 DataTable dt = new DataTable();
                 if (conn_publisher.State == ConnectionState.Closed) conn_publisher.Open();
@@ -112,10 +112,11 @@ namespace ThiTracNghiem_CSDL_PT
                 MessageBox.Show("Không thể kết nối database! " + ex.Message, "",
                     MessageBoxButtons.OK);
             }
+            */
         }
         private int KetNoi_CSDLGOC()
         {
-            if (conn_publisher != null && conn_publisher.State == ConnectionState.Open)
+            /*if (conn_publisher != null && conn_publisher.State == ConnectionState.Open)
                 conn_publisher.Close();
             try
             {
@@ -129,7 +130,7 @@ namespace ThiTracNghiem_CSDL_PT
                 MessageBox.Show("Lỗi kết nối về ABC CSDL gốc.\n Bạn xem lại trên Server của Publisher và tên CSDL trong chuỗi kết nối. \n"
                     + e.Message);
                 return 0;
-            }
+            }*/
         }
         private String getID(String username,string pass)
         {
