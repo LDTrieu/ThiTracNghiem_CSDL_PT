@@ -36,8 +36,8 @@ namespace ThiTracNghiem_CSDL_PT
         public static String svMaLop = "";
         public static String svTenLop = "";
 
-
-        public static BindingSource bds_dspm = new BindingSource();  // giữ bdsPM khi đăng nhập
+        // liên kết dữ liệu từ bảng dữ liệu vào chương trình
+        public static BindingSource bindingSource = new BindingSource();  // giữ bdsPM khi đăng nhập
         public static frmMain frmChinh;
         public static frmSinhVien frmSinhVien;
         public static frmSinhVien frmLamBaiThi;

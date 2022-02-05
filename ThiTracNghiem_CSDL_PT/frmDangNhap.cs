@@ -37,6 +37,24 @@ namespace ThiTracNghiem_CSDL_PT
             cmbCoSo.SelectedItem = -1;     
         }
 
+        private void layDanhSachPhanManh(String cmd)
+        {
+            if (DBConnection.PublisherConnection.State == ConnectionState.Closed)
+            {
+                DBConnection.PublisherConnection.Open();
+            }
+            DataTable dataTable = new DataTable();
+            // adapter dùng để đưa dữ liệu từ view sang database
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd, DBConnection.PublisherConnection);
+            dataAdapter.Fill(dataTable);
+
+            DBConnection.PublisherConnection.Close();
+            Program.bindingSource.DataSource = dataTable;
+
+            cmbCoSo.DataSource = Program.bindingSource;
+            cmbCoSo.DisplayMember = "TENCS";
+            cmbCoSo.ValueMember = "TENSERVER";
+        }
 
         private DataTable GetSubcriber()
         {
@@ -57,6 +75,13 @@ namespace ThiTracNghiem_CSDL_PT
         
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
+            txtTaiKhoan.Text = "LDT";
+            txtMatKhau.Text = "123456";
+            if (KetNoi_CSDLGOC() == 0)
+                return;
+            // Lấy 2 cái đầu tiên của danh sách
+            GetSubcriber
+           
            
             //rdGiangVien.AutoCheck = true;
             if (KetNoi_CSDLGOC() == 0)
@@ -92,45 +117,26 @@ namespace ThiTracNghiem_CSDL_PT
             }*/
         }
 
-        private void LayDSPM(String cmd)
+        
+        private int KetNoi_CSDLGOC()
         {
-            /*try
+            if (DBConnection.PublisherConnection != null && DBConnection.PublisherConnection.State == ConnectionState.Open)
             {
-                DataTable dt = new DataTable();
-                if (conn_publisher.State == ConnectionState.Closed) conn_publisher.Open();
-                SqlDataAdapter da = new SqlDataAdapter(cmd, conn_publisher);
-                //da.Fill(dt);
-                conn_publisher.Close();
-                Program.bds_dspm.DataSource = dt;
-                cmbCoSo.DataSource = Program.bds_dspm;
-                cmbCoSo.DisplayMember = "TENCS";
-                //cmbCoSo.ValueMember = "TENSERVER";
-                //MessageBox.Show("FFF");
+                DBConnection.PublisherConnection.Close();
+            }
+            try
+            {
+                DBConnection.PublisherConnection.ConnectionString = Program.connstr_publisher;
+                DBConnection.PublisherConnection.Open();
+                return 1;
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Không thể kết nối database! " + ex.Message, "",
-                    MessageBoxButtons.OK);
-            }
-            */
-        }
-        private int KetNoi_CSDLGOC()
-        {
-            /*if (conn_publisher != null && conn_publisher.State == ConnectionState.Open)
-                conn_publisher.Close();
-            try
-            {
-                conn_publisher.ConnectionString = Program.connstr_publisher;
-                //MessageBox.Show("BBBB");
-                conn_publisher.Open();
-                return 1;
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Lỗi kết nối về ABC CSDL gốc.\n Bạn xem lại trên Server của Publisher và tên CSDL trong chuỗi kết nối. \n"
-                    + e.Message);
+                MessageBox.Show("Lỗi kết nối cơ sở dữ liệu.\nBạn xem lại user name và password.\n " +
+                    ex.Message, "", MessageBoxButtons.OK);
                 return 0;
-            }*/
+            }
+            
         }
         private String getID(String username,string pass)
         {
